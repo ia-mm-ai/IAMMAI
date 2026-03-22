@@ -14,17 +14,18 @@ IAMMAI defines the core protocol grammar for:
 
 ## Current scope
 
-The current publication includes the human-readable constitutional protocol only.
+The current publication includes the human-readable constitutional protocol and its machine-readable constitutional twin.
 
 Doorways, companion documents, machine-readable support artifacts, and implementation-adjacent materials may be added later as separate, bounded layers.
 
-## Primary artifact
+## Primary artifacts
 
-- `IAMMAI_Public_Constitutional_Protocol.pdf`
+- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf`
+- `canon.json`
 
 ## Reading posture
 
-IAMMAI should be read as a lawful protocol core.
+IAMMAI should be read as a constitutional protocol core.
 
 It defines the constitutional grammar of:
 - standing
