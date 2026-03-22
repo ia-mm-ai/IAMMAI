@@ -52,9 +52,7 @@ It defines the constitutional grammar of:
 
 ## Scope
 
-This repository publishes the constitutional core of IAMMAI.
-
-It presents the protocol in its bounded public form and should be read accordingly.
+IAMMAI presents the protocol in its bounded public form and should be read accordingly.
 
 The repository is not the implementation layer, not the wider companion architecture, and not the total field around the work. It is the constitutional center.
 
