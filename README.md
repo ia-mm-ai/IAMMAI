@@ -2,7 +2,48 @@
 
 IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
 
-This repository publishes the constitutional core of IAMMAI in human-readable and machine-readable form.
+This repository publishes the constitutional core of IAMMAI together with the first architecture documents for its implementation body.
+
+## Repository structure
+
+### `protocol/`
+The constitutional center.
+
+Contains:
+- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf` — the canonical human-readable constitutional protocol
+- `canon.json` — the machine-readable constitutional twin
+- `protocol_identity.json` — compact machine-readable protocol identity
+- `conformance_tests.md` — minimal conformance checks for IAMMAI core compatibility
+
+### `architecture/`
+The first body sketches.
+
+Contains:
+- `REFERENCE_ARCHITECTURE_v0.md`
+- `RUNTIME_COMPONENTS.md`
+- `WITNESS_VALIDATOR_GOVERNOR.md`
+- `AUTHORITATIVE_VS_DERIVATIVE_SURFACES.md`
+- `STATE_AND_DATA_ROLES.md`
+
+These documents define the first reference architecture for carrying the published constitutional core as more than text.
+
+## Reading order
+
+A clean reading order is:
+
+1. `protocol/IAMMAI_Public_Constitutional_Protocol_v1.0.pdf`
+2. `protocol/canon.json`
+3. `protocol/conformance_tests.md`
+4. `architecture/REFERENCE_ARCHITECTURE_v0.md`
+5. the remaining architecture documents
+
+## Constitutional priority
+
+The constitutional protocol remains the source of truth.
+
+Machine-readable artifacts, conformance artifacts, and architecture documents exist in support of that core and do not supersede it.
+
+If any surface, file, or implementation convenience conflicts with the constitutional protocol, the constitutional protocol governs.
 
 ## What IAMMAI does
 
@@ -14,66 +55,10 @@ IAMMAI defines the core protocol grammar for:
 - bounding authority, contribution, and consequence
 - keeping protocol-significant transitions traceable and recoverable
 
-## Repository contents
-
-This repository currently contains:
-
-- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf`  
-  The canonical human-readable constitutional protocol.
-
-- `canon.json`  
-  The machine-readable constitutional twin of the published core.
-
-- `protocol-identity.json`  
-  A compact machine-readable identity file for the protocol and its canonical artifacts.
-
-- `conformance_tests.md`  
-  Minimal conformance checks for systems claiming IAMMAI core compatibility.
-
-## Reading posture
-
-IAMMAI should be read as a constitutional protocol core.
-
-A good reading posture is:
-
-- read it for distinctions
-- read it for order
-- read it for anti-collapse logic
-- read it for what an implementation would need to preserve to remain compatible
-
-It defines the constitutional grammar of:
-
-- standing
-- lineage
-- authority
-- contribution
-- traceability
-- lawful change
-
-## Scope
-
-IAMMAI presents the protocol in its bounded public form and should be read accordingly.
-
-The repository is not the implementation layer, not the wider companion architecture, and not the total field around the work. It is the constitutional center.
-
-## Source of truth
-
-The source of truth is the human constitutional protocol:
-
-- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf`
-
-Machine-readable artifacts in this repository are derivative and supportive.
-
-If any conflict exists between the human constitutional text and a machine-readable projection, the human constitutional text overrides the machine-readable artifact.
-
 ## Attribution
 
 **Originating author and public release authority:**  
 Marko Markota
 
 **Historical lineage note:**  
-Selected preconstitutional lineage references are preserved separately as non-normative historical material and do not supersede this constitutional core.
-
-## License
-
-This repository is published under **CC0-1.0**.
+Selected preconstitutional lineage references are preserved separately as non-normative historical material and do not supersede the constitutional core.
