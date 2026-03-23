@@ -2,7 +2,7 @@
 
 IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
 
-This repository publishes the constitutional core of IAMMAI together with the first architecture and implementation documents for its lawful body.
+This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, and schema artifacts required for its lawful body.
 
 ## Repository structure
 
@@ -16,7 +16,7 @@ Contains:
 - `conformance_tests.md` — minimal conformance checks for IAMMAI core compatibility
 
 ### `architecture/`
-The first body architecture.
+The body architecture.
 
 Contains:
 - `REFERENCE_ARCHITECTURE_v0.md`
@@ -39,8 +39,21 @@ Contains:
 - `VALIDATION_ARTIFACT_OVERVIEW.md`
 - `TRANSITION_RECORD_OVERVIEW.md`
 - `IMPLEMENTATION_MAP.md`
+- `SCHEMA_MAP.md`
 
 These documents define the first implementation-oriented overviews derived from the constitutional core and the architecture layer.
+
+### `schemas/`
+The first mechanically constrained artifact family.
+
+Contains:
+- `witness_artifact.schema.json`
+- `validation_artifact.schema.json`
+- `governance_action.schema.json`
+- `transition_record.schema.json`
+- `state_record.schema.json`
+
+These files are the first schema family derived from the implementation layer. They do not replace the constitutional core; they make parts of the body more machine-checkable.
 
 ## Reading order
 
@@ -54,12 +67,13 @@ A clean reading order is:
 6. the remaining files in `architecture/`
 7. `implementation/IMPLEMENTATION_MAP.md`
 8. the remaining files in `implementation/`
+9. the files in `schemas/`
 
 ## Constitutional priority
 
 The constitutional protocol remains the source of truth.
 
-Machine-readable artifacts, architecture documents, and implementation documents exist in support of that core and do not supersede it.
+Machine-readable artifacts, architecture documents, implementation documents, and schemas exist in support of that core and do not supersede it.
 
 If any file, surface, or implementation convenience conflicts with the constitutional protocol, the constitutional protocol governs.
 
@@ -79,10 +93,11 @@ This repository now contains:
 
 - the published constitutional core
 - the machine-readable constitutional twin
-- the first architecture body
+- the first body architecture
 - the first implementation derivative set
+- the first schema family
 
-This is enough to begin embodiment without treating implementation as a substitute for the law.
+That is enough to begin embodiment without treating implementation as a substitute for the law.
 
 ## Attribution
 
