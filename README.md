@@ -2,7 +2,7 @@
 
 IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
 
-This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, and schema artifacts required for its lawful body.
+This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, and runtime artifacts required for its lawful body.
 
 ## Repository structure
 
@@ -55,6 +55,18 @@ Contains:
 
 These files are the first schema family derived from the implementation layer. They do not replace the constitutional core; they make parts of the body more machine-checkable.
 
+### `runtime/`
+The first runtime-oriented motion layer.
+
+Contains:
+- `RUNTIME_FLOW_MAP.md`
+- `VALIDATOR_FLOW.md`
+- `WITNESS_FLOW.md`
+- `GOVERNOR_FLOW.md`
+- `REGISTRY_FLOW.md`
+
+These documents define how the first lawful body moves in runtime form while preserving the constitutional distinctions already established.
+
 ## Reading order
 
 A clean reading order is:
@@ -68,12 +80,14 @@ A clean reading order is:
 7. `implementation/IMPLEMENTATION_MAP.md`
 8. the remaining files in `implementation/`
 9. the files in `schemas/`
+10. `runtime/RUNTIME_FLOW_MAP.md`
+11. the remaining files in `runtime/`
 
 ## Constitutional priority
 
 The constitutional protocol remains the source of truth.
 
-Machine-readable artifacts, architecture documents, implementation documents, and schemas exist in support of that core and do not supersede it.
+Machine-readable artifacts, architecture documents, implementation documents, schemas, and runtime documents exist in support of that core and do not supersede it.
 
 If any file, surface, or implementation convenience conflicts with the constitutional protocol, the constitutional protocol governs.
 
@@ -96,8 +110,9 @@ This repository now contains:
 - the first body architecture
 - the first implementation derivative set
 - the first schema family
+- the first runtime flow family
 
-That is enough to begin embodiment without treating implementation as a substitute for the law.
+That is enough to move from constitutional description into early embodiment without treating implementation as a substitute for the law.
 
 ## Attribution
 
