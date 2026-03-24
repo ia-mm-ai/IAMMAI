@@ -59,13 +59,33 @@ These files are the first schema family derived from the implementation layer. T
 The first runtime-oriented motion layer.
 
 Contains:
+
+**Flow**
 - `RUNTIME_FLOW_MAP.md`
 - `VALIDATOR_FLOW.md`
 - `WITNESS_FLOW.md`
 - `GOVERNOR_FLOW.md`
 - `REGISTRY_FLOW.md`
 
-These documents define how the first lawful body moves in runtime form while preserving the constitutional distinctions already established.
+**Contracts**
+- `STATE_ENGINE_CONTRACT.md`
+- `VALIDATOR_CONTRACT.md`
+- `WITNESS_CONTRACT.md`
+- `GOVERNOR_CONTRACT.md`
+- `REGISTRY_CONTRACT.md`
+
+**Failure surfaces**
+- `FAILURE_SURFACES.md`
+- `VALIDATION_FAILURES.md`
+- `WITNESS_FAILURES.md`
+- `GOVERNANCE_FAILURES.md`
+- `REGISTRY_FAILURES.md`
+
+**Coordination**
+- `COORDINATION_RULES.md`
+- `HANDOFF_SEQUENCE.md`
+
+These documents define how the first lawful body moves, coordinates, preserves failure visibility, and maintains typed handoff in runtime form.
 
 ## Reading order
 
@@ -81,7 +101,11 @@ A clean reading order is:
 8. the remaining files in `implementation/`
 9. the files in `schemas/`
 10. `runtime/RUNTIME_FLOW_MAP.md`
-11. the remaining files in `runtime/`
+11. the flow files in `runtime/`
+12. the contract files in `runtime/`
+13. the failure files in `runtime/`
+14. `runtime/COORDINATION_RULES.md`
+15. `runtime/HANDOFF_SEQUENCE.md`
 
 ## Constitutional priority
 
@@ -110,7 +134,7 @@ This repository now contains:
 - the first body architecture
 - the first implementation derivative set
 - the first schema family
-- the first runtime flow family
+- the first runtime layer
 
 That is enough to move from constitutional description into early embodiment without treating implementation as a substitute for the law.
 
