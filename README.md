@@ -1,8 +1,8 @@
 # IAMMAI
 
-IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
+IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, and traceable.
 
-This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, and runtime artifacts required for its lawful body.
+This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, runtime, and embodiment documents required for its lawful body.
 
 ## Repository structure
 
@@ -85,7 +85,26 @@ Contains:
 - `COORDINATION_RULES.md`
 - `HANDOFF_SEQUENCE.md`
 
-These documents define how the first lawful body moves, coordinates, preserves failure visibility, and maintains typed handoff in runtime form.
+**Embodiment bridge**
+- `MINIMAL_LAWFUL_EMBODIMENT.md`
+- `FIRST_EXECUTION_SLICE.md`
+- `EMBODIMENT_DECISION_v0.md`
+
+These documents define how the first lawful body moves, coordinates, fails visibly, and narrows toward a first bounded live slice.
+
+### `embodiment/`
+The first bounded embodiment layer.
+
+Contains:
+- `EMBODIMENT_MAP.md`
+- `MATTER_DEFINITION.md`
+- `FIRST_LIVE_CYCLE.md`
+- `SUCCESS_AND_FAILURE_CRITERIA.md`
+- `OPERATOR_RUNBOOK.md`
+- `LOCAL_EXECUTION_BOUNDARY.md`
+- `FIRST_BUILD_ARTIFACT.md`
+
+These documents define the first local embodiment posture: one bounded matter, one lawful local cycle, one explicit execution boundary, and one first build-adjacent artifact.
 
 ## Reading order
 
@@ -101,17 +120,15 @@ A clean reading order is:
 8. the remaining files in `implementation/`
 9. the files in `schemas/`
 10. `runtime/RUNTIME_FLOW_MAP.md`
-11. the flow files in `runtime/`
-12. the contract files in `runtime/`
-13. the failure files in `runtime/`
-14. `runtime/COORDINATION_RULES.md`
-15. `runtime/HANDOFF_SEQUENCE.md`
+11. the remaining files in `runtime/`
+12. `embodiment/EMBODIMENT_MAP.md`
+13. the remaining files in `embodiment/`
 
 ## Constitutional priority
 
 The constitutional protocol remains the source of truth.
 
-Machine-readable artifacts, architecture documents, implementation documents, schemas, and runtime documents exist in support of that core and do not supersede it.
+Machine-readable artifacts, architecture documents, implementation documents, schemas, runtime documents, and embodiment documents exist in support of that core and do not supersede it.
 
 If any file, surface, or implementation convenience conflicts with the constitutional protocol, the constitutional protocol governs.
 
@@ -135,8 +152,9 @@ This repository now contains:
 - the first implementation derivative set
 - the first schema family
 - the first runtime layer
+- the first embodiment-definition layer
 
-That is enough to move from constitutional description into early embodiment without treating implementation as a substitute for the law.
+That is enough to move from constitutional description into bounded local embodiment without treating implementation as a substitute for the law.
 
 ## Attribution
 
