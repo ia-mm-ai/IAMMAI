@@ -1,8 +1,16 @@
 # IAMMAI
 
-IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was decided, and what follows clear, and traceable.
+IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was checked, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
 
-This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, runtime, and embodiment documents required for its lawful body.
+This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, runtime, continuity, and embodiment layers required for its lawful body.
+
+## What IAMMAI is
+
+IAMMAI is:
+
+- a public constitutional protocol
+- a bounded implementation-facing body beneath that protocol
+- a typed framework for preserving state, transition, witness, validation, governance, and continuity without semantic collapse
 
 ## Repository structure
 
@@ -12,99 +20,142 @@ The constitutional center.
 Contains:
 - `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf` — the canonical human-readable constitutional protocol
 - `canon.json` — the machine-readable constitutional twin
-- `protocol_identity.json` — compact machine-readable protocol identity
 - `conformance_tests.md` — minimal conformance checks for IAMMAI core compatibility
+- `protocol_identity.json` — compact protocol identity and source-priority framing
+
+Job:
+- define constitutional meaning
+- preserve core invariants
+- remain the semantic source of truth
+
+---
 
 ### `architecture/`
-The body architecture.
+The first body architecture.
 
 Contains:
+- `ARCHITECTURE_MAP.md`
+- `AUTHORITATIVE_VS_DERIVATIVE_SURFACES.md`
 - `REFERENCE_ARCHITECTURE_v0.md`
 - `RUNTIME_COMPONENTS.md`
-- `WITNESS_VALIDATOR_GOVERNOR.md`
-- `AUTHORITATIVE_VS_DERIVATIVE_SURFACES.md`
 - `STATE_AND_DATA_ROLES.md`
-- `ARCHITECTURE_MAP.md`
+- `WITNESS_VALIDATOR_GOVERNOR.md`
 
-These documents define the first implementation-facing architecture for carrying the constitutional core as more than text.
+Job:
+- define the minimum lawful body required for the constitutional core to exist as more than text
+- preserve the main role separations
+- keep authoritative and derivative surfaces distinct
+- prevent architectural collapse into product convenience
+
+---
 
 ### `implementation/`
-The first technical derivative layer.
+The first implementation-facing derivative layer.
 
 Contains:
-- `STATE_MACHINE_OVERVIEW.md`
 - `CANONICAL_RECORDS_OVERVIEW.md`
-- `WITNESS_ARTIFACT_OVERVIEW.md`
 - `GOVERNANCE_ACTION_OVERVIEW.md`
-- `VALIDATION_ARTIFACT_OVERVIEW.md`
-- `TRANSITION_RECORD_OVERVIEW.md`
 - `IMPLEMENTATION_MAP.md`
 - `SCHEMA_MAP.md`
+- `STATE_MACHINE_OVERVIEW.md`
+- `TRANSITION_RECORD_OVERVIEW.md`
+- `VALIDATION_ARTIFACT_OVERVIEW.md`
+- `WITNESS_ARTIFACT_OVERVIEW.md`
 
-These documents define the first implementation-oriented overviews derived from the constitutional core and the architecture layer.
+Job:
+- translate constitutional and architectural distinctions into implementation-facing form
+- keep record families, state movement, witness, validation, governance, and transition logic technically legible
+- remain implementation-neutral
+
+---
 
 ### `schemas/`
 The first mechanically constrained artifact family.
 
 Contains:
-- `witness_artifact.schema.json`
-- `validation_artifact.schema.json`
+- `continuity_turn.schema.json`
 - `governance_action.schema.json`
-- `transition_record.schema.json`
 - `state_record.schema.json`
+- `transition_record.schema.json`
+- `validation_artifact.schema.json`
+- `witness_artifact.schema.json`
 
-These files are the first schema family derived from the implementation layer. They do not replace the constitutional core; they make parts of the body more machine-checkable.
+Job:
+- provide typed machine-checkable surfaces for the first canonical artifact family
+- support implementation without replacing constitutional meaning
+
+---
 
 ### `runtime/`
 The first runtime-oriented motion layer.
 
 Contains:
+- runtime flow documents
+- runtime contracts
+- runtime failure surfaces
+- coordination and handoff documents
+- embodiment-bridge documents
 
-**Flow**
-- `RUNTIME_FLOW_MAP.md`
-- `VALIDATOR_FLOW.md`
-- `WITNESS_FLOW.md`
-- `GOVERNOR_FLOW.md`
-- `REGISTRY_FLOW.md`
-
-**Contracts**
-- `STATE_ENGINE_CONTRACT.md`
-- `VALIDATOR_CONTRACT.md`
-- `WITNESS_CONTRACT.md`
-- `GOVERNOR_CONTRACT.md`
-- `REGISTRY_CONTRACT.md`
-
-**Failure surfaces**
-- `FAILURE_SURFACES.md`
-- `VALIDATION_FAILURES.md`
-- `WITNESS_FAILURES.md`
-- `GOVERNANCE_FAILURES.md`
-- `REGISTRY_FAILURES.md`
-
-**Coordination**
+Included files:
 - `COORDINATION_RULES.md`
-- `HANDOFF_SEQUENCE.md`
-
-**Embodiment bridge**
-- `MINIMAL_LAWFUL_EMBODIMENT.md`
-- `FIRST_EXECUTION_SLICE.md`
 - `EMBODIMENT_DECISION_v0.md`
+- `FAILURE_SURFACES.md`
+- `FIRST_EXECUTION_SLICE.md`
+- `GOVERNANCE_FAILURES.md`
+- `GOVERNOR_CONTRACT.md`
+- `GOVERNOR_FLOW.md`
+- `HANDOFF_SEQUENCE.md`
+- `MINIMAL_LAWFUL_EMBODIMENT.md`
+- `REGISTRY_CONTRACT.md`
+- `REGISTRY_FAILURES.md`
+- `REGISTRY_FLOW.md`
+- `RUNTIME_FLOW_MAP.md`
+- `STATE_ENGINE_CONTRACT.md`
+- `VALIDATION_FAILURES.md`
+- `VALIDATOR_CONTRACT.md`
+- `VALIDATOR_FLOW.md`
+- `WITNESS_CONTRACT.md`
+- `WITNESS_FAILURES.md`
+- `WITNESS_FLOW.md`
 
-These documents define how the first lawful body moves, coordinates, fails visibly, and narrows toward a first bounded live slice.
+Job:
+- describe how the live body moves
+- keep witness, validation, governance, state handling, and preservation bounded in motion
+- keep typed non-passage visible
+
+---
+
+### `continuity/`
+The first explicit continuity layer.
+
+Contains:
+- `CONTINUITY_EMISSION_RULES_v0.md`
+- `CONTINUITY_OVERVIEW.md`
+- `CONTINUITY_TURN_OVERVIEW.md`
+
+Job:
+- define continuity as more than storage
+- preserve lawful succession, carried relation, and turn-based continuity without silent rewrite
+- keep continuity distinct from raw registry accumulation or narrative reconstruction
+
+---
 
 ### `embodiment/`
 The first bounded embodiment layer.
 
 Contains:
 - `EMBODIMENT_MAP.md`
-- `MATTER_DEFINITION.md`
-- `FIRST_LIVE_CYCLE.md`
-- `SUCCESS_AND_FAILURE_CRITERIA.md`
-- `OPERATOR_RUNBOOK.md`
-- `LOCAL_EXECUTION_BOUNDARY.md`
 - `FIRST_BUILD_ARTIFACT.md`
+- `FIRST_LIVE_CYCLE.md`
+- `LOCAL_EXECUTION_BOUNDARY.md`
+- `MATTER_DEFINITION.md`
+- `OPERATOR_RUNBOOK.md`
+- `SUCCESS_AND_FAILURE_CRITERIA.md`
 
-These documents define the first local embodiment posture: one bounded matter, one lawful local cycle, one explicit execution boundary, and one first build-adjacent artifact.
+Job:
+- define the first bounded live slice
+- keep first embodiment local, auditable, and structurally lawful
+- prevent first execution from collapsing into rollout, product theater, or private capture
 
 ## Reading order
 
@@ -121,26 +172,30 @@ A clean reading order is:
 9. the files in `schemas/`
 10. `runtime/RUNTIME_FLOW_MAP.md`
 11. the remaining files in `runtime/`
-12. `embodiment/EMBODIMENT_MAP.md`
-13. the remaining files in `embodiment/`
+12. `continuity/CONTINUITY_OVERVIEW.md`
+13. the remaining files in `continuity/`
+14. `embodiment/EMBODIMENT_MAP.md`
+15. the remaining files in `embodiment/`
 
 ## Constitutional priority
 
 The constitutional protocol remains the source of truth.
 
-Machine-readable artifacts, architecture documents, implementation documents, schemas, runtime documents, and embodiment documents exist in support of that core and do not supersede it.
+Machine-readable artifacts, architectural documents, implementation documents, schemas, runtime documents, continuity documents, and embodiment documents exist in support of that core and do not supersede it.
 
-If any file, surface, or implementation convenience conflicts with the constitutional protocol, the constitutional protocol governs.
+If any later layer, surface, or implementation convenience diverges from the constitutional protocol, the constitutional protocol governs.
 
 ## What IAMMAI does
 
 IAMMAI defines the core protocol grammar for:
 
 - separating candidate material from standing state
+- preserving lawful phase order
+- keeping containment orthogonal
+- preserving resolution as FINALIZE / INVALIDATE / EVOLVE
 - preserving lineage across lawful change
-- preventing silent overwrite and semantic collapse
-- bounding authority, contribution, and consequence
-- keeping protocol-significant transitions traceable and recoverable
+- bounding governance, contribution, and representation
+- keeping what happened, what changed, who acted, and what follows reconstructable without semantic collapse
 
 ## Current position
 
@@ -149,12 +204,13 @@ This repository now contains:
 - the published constitutional core
 - the machine-readable constitutional twin
 - the first body architecture
-- the first implementation derivative set
+- the first implementation-facing derivative set
 - the first schema family
-- the first runtime layer
-- the first embodiment-definition layer
+- the first runtime-oriented motion layer
+- the first explicit continuity layer
+- the first bounded embodiment layer
 
-That is enough to move from constitutional description into bounded local embodiment without treating implementation as a substitute for the law.
+That is enough for IAMMAI to exist publicly as a constitutional/body architecture rather than merely as conceptual notes.
 
 ## Attribution
 
@@ -162,7 +218,7 @@ That is enough to move from constitutional description into bounded local embodi
 Marko Markota
 
 **Historical lineage note:**  
-Selected preconstitutional lineage references are preserved separately as non-normative historical material and do not supersede the constitutional core.
+Selected preconstitutional lineage references may exist outside this repository as historical material. They do not supersede the constitutional core published here.
 
 ## License
 
