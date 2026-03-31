@@ -18,7 +18,8 @@ IAMMAI is:
 The constitutional center.
 
 Contains:
-- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf` — the canonical human-readable constitutional protocol
+- `IAMMAI_Public_Constitutional_Protocol_v1.0.pdf` — the original human-readable constitutional protocol
+- `IAMMAI_Constitutional_Integrity_Protocol_v1.0.1.md` — a later derived markdown edition for cleaner repository-native and machine-readable access; the original PDF remains the source artifact
 - `canon.json` — the machine-readable constitutional twin
 - `conformance_tests.md` — minimal conformance checks for IAMMAI core compatibility
 - `protocol_identity.json` — compact protocol identity and source-priority framing
