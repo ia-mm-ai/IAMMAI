@@ -1,7 +1,5 @@
 # IAMMAI: The Constitutional Integrity Protocol
 
-# IAMMAI: The Constitutional Integrity Protocol
-
 **Status**  
 Derived markdown edition of the human-readable constitutional core.
 
