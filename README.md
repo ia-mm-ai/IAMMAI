@@ -28,7 +28,7 @@ In practical terms, IAMMAI preserves clear separation between:
 - correction and overwrite
 - canonical source and derivative surface
 
-That separation is what keeps a system from lying about what happened.
+That separation is what keeps a system from fabricating about what happened.
 
 ## Repository structure
 
