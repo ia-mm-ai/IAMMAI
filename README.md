@@ -1,16 +1,34 @@
 # IAMMAI
 
-IAMMAI is a public constitutional protocol for keeping what happened, what stands, what was checked, what was decided, and what follows clear, traceable, and impossible to silently rewrite.
+IAMMAI is a public constitutional protocol for lawful standing, lawful passage, lawful continuity, and lawful consequence across human, machine, and hybrid systems.
 
-This repository publishes the constitutional core of IAMMAI together with the first architecture, implementation, schema, runtime, continuity, and embodiment layers required for its lawful body.
+It defines the grammar by which candidate material may become standing state, remain traceable through change, and produce consequence without silent rewrite, semantic collapse, erased lineage, or illegitimate transition.
 
-## What IAMMAI is
+This repository publishes the constitutional core of IAMMAI together with the first body required to carry it: architecture, implementation-facing derivation, schemas, runtime, continuity, and first embodiment posture.
 
-IAMMAI is:
+## What kind of thing this is
 
-- a public constitutional protocol
-- a bounded implementation-facing body beneath that protocol
-- a typed framework for preserving state, transition, witness, validation, governance, and continuity without semantic collapse
+IAMMAI should be read as a **constitutional body**.
+
+Its center is not prediction, not optimization, and not product convenience.  
+Its center is lawful order between:
+
+- what appears
+- what may count
+- what may stand
+- what may continue
+- who may act
+- what may follow
+
+In practical terms, IAMMAI preserves clear separation between:
+
+- candidate material and standing state
+- witness, validation, and governance
+- truth, continuity, decision, and consequence
+- correction and overwrite
+- canonical source and derivative surface
+
+That separation is what keeps a system from lying about what happened.
 
 ## Repository structure
 
@@ -29,8 +47,6 @@ Job:
 - preserve core invariants
 - remain the semantic source of truth
 
----
-
 ### `architecture/`
 The first body architecture.
 
@@ -47,8 +63,6 @@ Job:
 - preserve the main role separations
 - keep authoritative and derivative surfaces distinct
 - prevent architectural collapse into product convenience
-
----
 
 ### `implementation/`
 The first implementation-facing derivative layer.
@@ -68,8 +82,6 @@ Job:
 - keep record families, state movement, witness, validation, governance, and transition logic technically legible
 - remain implementation-neutral
 
----
-
 ### `schemas/`
 The first mechanically constrained artifact family.
 
@@ -84,8 +96,6 @@ Contains:
 Job:
 - provide typed machine-checkable surfaces for the first canonical artifact family
 - support implementation without replacing constitutional meaning
-
----
 
 ### `runtime/`
 The first runtime-oriented motion layer.
@@ -124,8 +134,6 @@ Job:
 - keep witness, validation, governance, state handling, and preservation bounded in motion
 - keep typed non-passage visible
 
----
-
 ### `continuity/`
 The first explicit continuity layer.
 
@@ -138,8 +146,6 @@ Job:
 - define continuity as more than storage
 - preserve lawful succession, carried relation, and turn-based continuity without silent rewrite
 - keep continuity distinct from raw registry accumulation or narrative reconstruction
-
----
 
 ### `embodiment/`
 The first bounded embodiment layer.
@@ -158,7 +164,9 @@ Job:
 - keep first embodiment local, auditable, and structurally lawful
 - prevent first execution from collapsing into rollout, product theater, or private capture
 
-## Reading order
+## How to read IAMMAI
+
+Start with the constitutional core.
 
 A clean reading order is:
 
@@ -177,6 +185,12 @@ A clean reading order is:
 13. the remaining files in `continuity/`
 14. `embodiment/EMBODIMENT_MAP.md`
 15. the remaining files in `embodiment/`
+
+This repository should be read **by ranked authority, not flatly**:
+
+- the constitutional core defines the law
+- later layers carry, translate, constrain, or prove that law
+- later layers do not supersede the constitutional source
 
 ## Constitutional priority
 
@@ -197,6 +211,10 @@ IAMMAI defines the core protocol grammar for:
 - preserving lineage across lawful change
 - bounding governance, contribution, and representation
 - keeping what happened, what changed, who acted, and what follows reconstructable without semantic collapse
+
+Put differently:
+
+IAMMAI is a law-body for making the passage from appearance to standing to consequence lawful and non-collapsing.
 
 ## Current position
 
