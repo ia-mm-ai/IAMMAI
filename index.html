@@ -3,396 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IAMMAI</title>
+    <meta name="color-scheme" content="dark" />
+    <title>HOLD — holding.world</title>
     <meta
       name="description"
-      content="IAMMAI is a public constitutional protocol for lawful standing, lawful passage, lawful continuity, and lawful consequence across human, machine, and hybrid systems."
+      content="A public projection surface for exact, target-specific HOLD records."
     />
-    <style>
-      :root {
-        --bg: #05070b;
-        --bg2: #0a0f16;
-        --fg: #eef3fb;
-        --muted: #9ba9bf;
-        --line: rgba(255, 255, 255, 0.12);
-        --line-2: rgba(255, 255, 255, 0.22);
-        --glow: rgba(157, 208, 255, 0.15);
-        --btn: #eef3fb;
-        --btn-fg: #05070b;
-        --btn2: rgba(255, 255, 255, 0.06);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        min-height: 100%;
-        background:
-          radial-gradient(
-            circle at 50% 35%,
-            rgba(98, 147, 205, 0.08),
-            transparent 28%
-          ),
-          radial-gradient(
-            circle at 50% 70%,
-            rgba(255, 255, 255, 0.03),
-            transparent 34%
-          ),
-          linear-gradient(180deg, var(--bg2), var(--bg));
-        color: var(--fg);
-        font-family:
-          Inter,
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        overflow-x: hidden;
-      }
-
-      .page {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 40px 20px 56px;
-        position: relative;
-        isolation: isolate;
-      }
-
-      .noise,
-      .vignette,
-      .grid {
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-      }
-
-      .grid {
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-        background-size: 56px 56px;
-        mask-image: radial-gradient(
-          circle at 50% 50%,
-          black 30%,
-          transparent 78%
-        );
-        opacity: 0.18;
-        z-index: -3;
-      }
-
-      .vignette {
-        background: radial-gradient(
-          circle at 50% 42%,
-          transparent 35%,
-          rgba(0, 0, 0, 0.45) 100%
-        );
-        z-index: -2;
-      }
-
-      .noise {
-        opacity: 0.04;
-        z-index: -1;
-        background-image: radial-gradient(
-          circle,
-          #fff 0.8px,
-          transparent 0.8px
-        );
-        background-size: 24px 24px;
-      }
-
-      .shell {
-        width: min(920px, 100%);
-        display: grid;
-        justify-items: center;
-        gap: 22px;
-        text-align: center;
-      }
-
-      .mark {
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        font-size: 0.78rem;
-        color: var(--muted);
-        margin-bottom: 4px;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.8rem, 8vw, 6.6rem);
-        line-height: 0.95;
-        letter-spacing: -0.06em;
-        font-weight: 700;
-      }
-
-      .sub {
-        width: min(760px, 100%);
-        margin: 0;
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        line-height: 1.65;
-        color: #d6dfec;
-      }
-
-      .sub strong {
-        font-weight: 600;
-        color: var(--fg);
-      }
-
-      .cta-row {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 4px;
-      }
-
-      .btn {
-        appearance: none;
-        border: 1px solid var(--line);
-        padding: 14px 20px;
-        min-width: 210px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: var(--fg);
-        background: var(--btn2);
-        backdrop-filter: blur(8px);
-        font-weight: 600;
-        transition:
-          transform 180ms ease,
-          border-color 180ms ease,
-          background 180ms ease,
-          box-shadow 180ms ease;
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-        border-color: var(--line-2);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
-      }
-
-      .btn.primary {
-        background: var(--btn);
-        color: var(--btn-fg);
-        border-color: transparent;
-      }
-
-      .ring-wrap {
-        position: relative;
-        width: min(72vw, 520px);
-        aspect-ratio: 1;
-        margin: 6px 0 10px;
-        display: grid;
-        place-items: center;
-        filter: drop-shadow(0 0 34px var(--glow));
-      }
-
-      .ring-wrap::before {
-        content: "";
-        position: absolute;
-        width: 72%;
-        height: 72%;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: inset 0 0 35px rgba(255, 255, 255, 0.025);
-      }
-
-      svg {
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-      }
-
-      .ring {
-        fill: none;
-        stroke-linecap: round;
-        transform-origin: 50% 50%;
-        animation: spin 16s linear infinite;
-      }
-
-      .ring.r1 {
-        stroke: rgba(255, 255, 255, 0.92);
-        stroke-width: 1.35;
-        stroke-dasharray: 1 8;
-      }
-
-      .ring.r2 {
-        stroke: rgba(255, 255, 255, 0.35);
-        stroke-width: 1;
-        stroke-dasharray: 2 18;
-        animation-duration: 26s;
-        animation-direction: reverse;
-      }
-
-      .ring.r3 {
-        stroke: rgba(164, 218, 255, 0.38);
-        stroke-width: 0.9;
-        stroke-dasharray: 1 24;
-        animation-duration: 40s;
-      }
-
-      .spiral {
-        fill: none;
-        stroke: rgba(255, 255, 255, 0.95);
-        stroke-width: 1.5;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        animation: breathe 5.6s ease-in-out infinite;
-      }
-
-      .spiral.echo {
-        stroke: rgba(134, 196, 255, 0.22);
-        stroke-width: 1;
-        filter: blur(0.3px);
-        animation-duration: 7.8s;
-      }
-
-      .tag {
-        font-size: 0.83rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-top: 2px;
-      }
-
-      footer {
-        margin-top: 20px;
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes breathe {
-        0%,
-        100% {
-          transform: scale(0.992);
-          opacity: 0.92;
-        }
-        50% {
-          transform: scale(1.008);
-          opacity: 1;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .page {
-          padding-top: 28px;
-        }
-        .ring-wrap {
-          width: min(88vw, 460px);
-        }
-        .btn {
-          min-width: 100%;
-        }
-        .cta-row {
-          width: 100%;
-        }
-      }
-    </style>
+    <link rel="icon" href="./assets/hold-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.v1.css" />
   </head>
   <body>
-    <div class="grid"></div>
-    <div class="vignette"></div>
-    <div class="noise"></div>
+    <div class="ambient-grid" aria-hidden="true"></div>
 
-    <main class="page">
-      <section class="shell" aria-label="IAMMAI entry surface">
-        <div class="mark">Public Constitutional Body</div>
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="holding.world home">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span>holding.world</span>
+      </a>
+          <span class="surface-label">Public HOLD surface</span>
+    </header>
 
-        <div class="ring-wrap" aria-hidden="true">
-          <svg
-            viewBox="0 0 600 600"
-            role="img"
-            aria-label="Geometric continuity loop"
-          >
-            <circle class="ring r2" cx="300" cy="300" r="250"></circle>
-            <circle class="ring r3" cx="300" cy="300" r="214"></circle>
-            <circle class="ring r1" cx="300" cy="300" r="178"></circle>
-
+    <main>
+      <section class="opening" aria-labelledby="page-title">
+        <div class="hold-mark" aria-hidden="true">
+          <svg viewBox="0 0 520 520" role="presentation">
+            <circle class="orbit orbit-one" cx="260" cy="260" r="210"></circle>
+            <circle class="orbit orbit-two" cx="260" cy="260" r="168"></circle>
             <path
-              class="spiral echo"
-              d="
-            M 300 145
-            C 385 145, 450 210, 450 292
-            C 450 387, 368 455, 286 455
-            C 190 455, 135 380, 135 307
-            C 135 208, 210 145, 296 145
-            C 364 145, 408 189, 408 252
-            C 408 330, 349 383, 287 383
-            C 214 383, 179 329, 179 276
-            C 179 210, 230 175, 286 175
-            C 336 175, 365 205, 365 248
-            C 365 302, 324 331, 286 331
-            C 244 331, 223 301, 223 270
-            C 223 233, 252 214, 284 214
-            C 311 214, 327 230, 327 252
-            C 327 279, 307 295, 287 295
-          "
-            />
-
-            <path
-              class="spiral"
-              d="
-            M 300 145
-            C 385 145, 450 210, 450 292
-            C 450 387, 368 455, 286 455
-            C 190 455, 135 380, 135 307
-            C 135 208, 210 145, 296 145
-            C 364 145, 408 189, 408 252
-            C 408 330, 349 383, 287 383
-            C 214 383, 179 329, 179 276
-            C 179 210, 230 175, 286 175
-            C 336 175, 365 205, 365 248
-            C 365 302, 324 331, 286 331
-            C 244 331, 223 301, 223 270
-            C 223 233, 252 214, 284 214
-            C 311 214, 327 230, 327 252
-            C 327 279, 307 295, 287 295
-          "
-            />
+              class="held-line"
+              d="M260 82 C363 82 438 159 438 257 C438 361 353 438 257 438 C148 438 82 352 82 264 C82 162 160 92 250 92 C326 92 384 146 384 218 C384 300 320 357 251 357 C174 357 132 299 132 240 C132 172 184 132 244 132 C298 132 334 167 334 214 C334 271 291 306 247 306 C197 306 172 269 172 232 C172 188 206 166 242 166 C273 166 294 185 294 212"
+            ></path>
+            <circle class="stop" cx="294" cy="212" r="7"></circle>
           </svg>
         </div>
 
-        <h1>IAMMAI</h1>
-
-        <p class="sub">
-          A <strong>constitutional body</strong> for lawful standing, passage,
-          continuity, contribution, and consequence across boundaries without
-          silent collapse.
-        </p>
-
-        <div class="cta-row">
-          <a
-            class="btn primary"
-            href="https://github.com/ia-mm-ai/IAMMAI/raw/main/protocol/IAMMAI_Public_Constitutional_Protocol_v1.0.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Download IAMMAI</a
-          >
-          <a
-            class="btn"
-            href="https://github.com/ia-mm-ai/IAMMAI"
-            target="_blank"
-            rel="noopener noreferrer"
-            >See the Repository</a
-          >
+        <div class="opening-copy">
+          <p class="eyebrow">Target-specific non-progression</p>
+          <h1 id="page-title">HOLD</h1>
+          <p class="lead">
+            An exact matter can remain held without being accepted, rejected,
+            released, or made true. This surface may show that posture publicly.
+            It cannot create it.
+          </p>
         </div>
 
-        <div class="tag">Public constitutional protocol · open source body</div>
+        <article class="registry-card" aria-live="polite" aria-busy="true">
+          <div class="registry-heading">
+            <div>
+              <p class="card-label">Public projections</p>
+              <p class="registry-count" data-projection-count>—</p>
+            </div>
+            <span class="status-chip" data-registry-status>Checking</span>
+          </div>
+          <div class="registry-empty" data-registry-empty hidden>
+            <h2>Nothing is presented here.</h2>
+            <p>
+              The absence of a public projection makes no claim about what any
+              locality may privately hold.
+            </p>
+          </div>
+          <div class="projection-list" data-projection-list></div>
+          <p class="registry-error" data-registry-error hidden>
+            The public registry could not be verified. No HOLD is presented.
+          </p>
+        </article>
+      </section>
 
-        <footer>Rooted in public law. Carried in executable form.</footer>
+      <section class="contract" aria-labelledby="contract-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projection contract</p>
+          <h2 id="contract-title">The source remains elsewhere.</h2>
+          <p>
+            A public entry is a bounded projection of an attributable source
+            record. The originating locality retains its Matter, Authority,
+            currentness, continuation, and release.
+          </p>
+        </div>
+
+        <div class="contract-grid">
+          <article>
+            <span class="ordinal">01</span>
+            <h3>Exact target</h3>
+            <p>
+              Every projection names one target, one scope, one source record,
+              and the digest of the bytes being projected.
+            </p>
+          </article>
+          <article>
+            <span class="ordinal">02</span>
+            <h3>Attributable posture</h3>
+            <p>
+              HOLD must already stand under a stated local basis. This medium
+              neither supplies missing Authority nor originates an occurrence.
+            </p>
+          </article>
+          <article>
+            <span class="ordinal">03</span>
+            <h3>Visible uncertainty</h3>
+            <p>
+              The reason for non-progression and every material uncertainty stay
+              attached. HOLD is not a third truth value.
+            </p>
+          </article>
+          <article>
+            <span class="ordinal">04</span>
+            <h3>Separate release</h3>
+            <p>
+              Time, silence, interface state, or deletion cannot release a HOLD.
+              Any release must point to its own attributable source record.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ceiling" aria-labelledby="ceiling-title">
+        <div>
+          <p class="eyebrow">Effect ceiling</p>
+          <h2 id="ceiling-title">Presentation is the whole effect.</h2>
+        </div>
+        <ul>
+          <li>Does not admit Matter or adopt source content as true.</li>
+          <li>Does not decide, prioritize, operationalize, or create consequence.</li>
+          <li>Does not create Authority, a Body, relation, or shared currentness.</li>
+          <li>Does not progress, expire, release, or remove the source HOLD.</li>
+          <li>Digest agreement proves byte identity only.</li>
+        </ul>
+      </section>
+
+      <section class="predecessor" aria-labelledby="predecessor-title">
+        <div>
+          <p class="eyebrow">Preserved lineage</p>
+          <h2 id="predecessor-title">IAMMAI is retained as predecessor material.</h2>
+        </div>
+        <a class="text-link" href="./archive/iammai/">
+          Open the historical surface
+          <span aria-hidden="true">↗</span>
+        </a>
       </section>
     </main>
+
+    <footer>
+      <span>holding.world</span>
+        <span>Public presentation does not create constitutional effect.</span>
+    </footer>
+
+    <script src="./assets/registry.v1.js" defer></script>
   </body>
 </html>

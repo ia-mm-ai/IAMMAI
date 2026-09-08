@@ -1,0 +1,17 @@
+{
+  "registry_id": "HOLDING-WORLD-PUBLIC-HOLD-PROJECTION-REGISTRY-001",
+  "schema_version": "1.0",
+  "registry_posture": "EMPTY",
+  "projections": [],
+  "effect_ceiling": [
+    "PUBLIC_PRESENTATION_ONLY",
+    "NO_HOLD_ORIGINATION",
+    "NO_MATTER_ADMISSION",
+    "NO_AUTHORITY_CREATION",
+    "NO_TRUTH_ADOPTION",
+    "NO_PROGRESSION",
+    "NO_RELEASE",
+    "NO_CONSEQUENCE",
+    "NO_SHARED_CURRENTNESS"
+  ]
+}
